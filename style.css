@@ -1,0 +1,127 @@
+
+*{@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap');
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    background: hsl(217, 54%, 11%);
+}
+.card{
+    max-width: 380px;
+    width: 100%;
+    background: hsl(216, 50%, 16%);
+    padding: 20px;
+    border-radius: 12px;
+}
+.img-box img{
+    width: 100%;
+    border-radius: 12px;
+    position: relative;
+}
+.img-box{
+    position: relative;
+}
+.img-box:hover::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: hsl(178, 100%, 50%);
+    opacity: 0.4;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 1;
+}
+.img-box:hover::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.card .title{
+    margin: 20px 0;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.card .title:hover{
+    color: hsl(178, 100%, 50%);
+}
+.card .info p{
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+    line-height: 28px;
+}
+.data{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.data img{
+    height: 20px;
+}
+.data .data-1 span{
+    color: hsl(178, 100%, 50%);
+    margin-left: 4px;
+    font-weight: 600;
+}
+.data .data-2 span{
+    color: hsl(215, 51%, 70%);
+    margin-left: 4px;
+}
+.line{
+    margin-top: 20px;
+    height: 2px;
+    width: 100%;
+    background: hsl(215, 32%, 27%);
+}
+.person{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.person img{
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid hsl(0, 0%, 100%);
+}
+.profile-info{
+    margin-left: 14px;
+    color: hsl(215, 51%, 70%);
+    font-size: 17px;
+}
+.profile-info span{
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.profile-info span:hover{
+    color: hsl(178, 100%, 50%);
+}
+@media (max-width: 412px){
+    body{
+        padding: 50px 20px;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    .card{
+        width: 100%;
+    }
+}
